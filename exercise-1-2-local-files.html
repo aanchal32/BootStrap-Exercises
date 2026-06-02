@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 1.2 – Bootstrap 5 via Downloaded Files</title>
+  <!--
+    SETUP INSTRUCTIONS:
+    1. Download Bootstrap 5 from https://getbootstrap.com/docs/5.3/getting-started/download/
+    2. Extract and place the files as shown below:
+       project/
+       ├── css/
+       │   └── bootstrap.min.css
+       ├── js/
+       │   └── bootstrap.bundle.min.js
+       └── exercise-1-2-local.html   <-- this file
+
+    3. Then link them as shown below.
+    ─────────────────────────────────────────────────
+    npm alternative:
+      npm init -y
+      npm install bootstrap
+    Then reference from node_modules/bootstrap/dist/...
+  -->
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <h1 class="display-5 text-success">Bootstrap 5 – Local / Downloaded Files</h1>
+    <p class="lead">
+      This page loads Bootstrap from <strong>locally downloaded files</strong> instead of a CDN.
+    </p>
+    <hr/>
+
+    <div class="alert alert-info">
+      📁 Make sure <code>css/bootstrap.min.css</code> and <code>js/bootstrap.bundle.min.js</code>
+      exist relative to this HTML file.
+    </div>
+
+    <h2 class="h5 mt-4">Using npm</h2>
+    <pre class="bg-dark text-white p-3 rounded">
+npm init -y
+npm install bootstrap
+    </pre>
+    <p>Then reference the files from <code>node_modules/bootstrap/dist/css/bootstrap.min.css</code></p>
+
+    <h2 class="h5 mt-4">Demo Components</h2>
+    <div class="row g-3 mt-2">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Card One</h5>
+            <p class="card-text">Bootstrap styles applied from local files.</p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Card Two</h5>
+            <p class="card-text">No internet required when using local files.</p>
+            <a href="#" class="btn btn-success btn-sm">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

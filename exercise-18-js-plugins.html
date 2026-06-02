@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 18 – Bootstrap 5 JavaScript Plugins</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h1 class="display-5">Exercise 18 – Bootstrap 5 JavaScript Plugins</h1>
+    <hr/>
+
+    <!-- Exercise 18.1 – Modal -->
+    <h2 class="h5 mt-4">Exercise 18.1 – Modal Popup</h2>
+    <p class="text-muted">A modal is a dialog box that appears over the page content.</p>
+
+    <div class="d-flex flex-wrap gap-3 mt-3">
+      <!-- Trigger buttons -->
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
+        <i class="bi bi-info-circle me-1"></i> Open Basic Modal
+      </button>
+      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirmModal">
+        <i class="bi bi-check-circle me-1"></i> Confirm Action
+      </button>
+      <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#formModal">
+        <i class="bi bi-pencil me-1"></i> Edit Profile (Form in Modal)
+      </button>
+      <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+        <i class="bi bi-trash3 me-1"></i> Delete Item
+      </button>
+    </div>
+
+    <!-- Basic Modal -->
+    <div class="modal fade" id="basicModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-info-circle me-2"></i>Information</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>This is a basic Bootstrap 5 modal. It includes a <strong>header</strong>, <strong>body</strong>, and <strong>footer</strong>.</p>
+            <p>Modals are triggered by <code>data-bs-toggle="modal"</code> and <code>data-bs-target="#modalId"</code>.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-primary">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirm Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title"><i class="bi bi-check-circle me-2"></i>Confirm Action</h5>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center py-4">
+            <i class="bi bi-question-circle-fill text-success" style="font-size:3rem;"></i>
+            <h5 class="mt-3">Are you sure?</h5>
+            <p class="text-muted">Do you want to submit this form? This action cannot be undone.</p>
+          </div>
+          <div class="modal-footer justify-content-center gap-3">
+            <button class="btn btn-secondary px-4" data-bs-dismiss="modal">Cancel</button>
+            <button class="btn btn-success px-4" data-bs-dismiss="modal">Yes, Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Modal -->
+    <div class="modal fade" id="formModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-pencil me-2"></i>Edit Profile</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" value="Priya Sharma"/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" value="priya@example.com"/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Bio</label>
+              <textarea class="form-control" rows="3">Full Stack Developer</textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button class="btn btn-warning" data-bs-dismiss="modal">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title"><i class="bi bi-exclamation-triangle me-2"></i>Delete</h5>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center py-3">
+            <p class="mb-0">This will permanently delete the item.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button class="btn btn-danger btn-sm">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exercise 18.2 – Accordion -->
+    <h2 class="h5 mt-5">Exercise 18.2 – Collapsible Accordion</h2>
+    <p class="text-muted">Accordion allows only one panel open at a time (or multiple with a small change).</p>
+
+    <!-- Standard Accordion (only one open at a time) -->
+    <div class="accordion mt-3" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            <i class="bi bi-question-circle me-2"></i> What is Bootstrap 5?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Bootstrap 5 is the world's most popular open-source CSS framework for building responsive, mobile-first websites. It includes pre-built components, a grid system, and JavaScript plugins.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            <i class="bi bi-question-circle me-2"></i> Does Bootstrap 5 need jQuery?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            No! Bootstrap 5 dropped the jQuery dependency entirely. It now uses vanilla JavaScript, making it lighter and faster than Bootstrap 4.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            <i class="bi bi-question-circle me-2"></i> How do I customise Bootstrap?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            You can customise Bootstrap using Sass variables. Override <code>_variables.scss</code> before importing Bootstrap's source, then recompile. This lets you change colours, fonts, spacing, and much more.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            <i class="bi bi-question-circle me-2"></i> What's new in Bootstrap 5.3?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Bootstrap 5.3 introduced built-in dark mode support via <code>data-bs-theme="dark"</code>, new colour mode utilities, and CSS variables throughout the framework for easier customisation.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flush Accordion variant -->
+    <h6 class="text-muted mt-4">Accordion Flush variant (no outer border):</h6>
+    <div class="accordion accordion-flush border rounded mt-2" id="flushAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush1">
+            Step 1 – Install Bootstrap
+          </button>
+        </h2>
+        <div id="flush1" class="accordion-collapse collapse" data-bs-parent="#flushAccordion">
+          <div class="accordion-body text-muted">Run <code>npm install bootstrap</code> or link via CDN.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush2">
+            Step 2 – Add HTML structure
+          </button>
+        </h2>
+        <div id="flush2" class="accordion-collapse collapse" data-bs-parent="#flushAccordion">
+          <div class="accordion-body text-muted">Use <code>.container</code>, <code>.row</code>, and <code>.col-*</code> classes.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush3">
+            Step 3 – Include the JS bundle
+          </button>
+        </h2>
+        <div id="flush3" class="accordion-collapse collapse" data-bs-parent="#flushAccordion">
+          <div class="accordion-body text-muted">Add <code>bootstrap.bundle.min.js</code> before the closing body tag.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-info mt-4">
+      💡 Remove <code>data-bs-parent="#accordionId"</code> to allow multiple panels open simultaneously.
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

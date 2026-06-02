@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 13 – Colors and Backgrounds</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h1 class="display-5">Exercise 13 – Colors and Backgrounds</h1>
+    <hr/>
+
+    <!-- Exercise 13.1 – Dashboard with bg-* classes -->
+    <h2 class="h5 mt-4">Exercise 13.1 – Dashboard with Contextual Backgrounds</h2>
+    <div class="row g-3 mt-2">
+      <div class="col-6 col-md-3">
+        <div class="bg-primary text-white p-4 rounded text-center shadow">
+          <h3 class="fw-bold">128</h3>
+          <p class="mb-0 small">Total Users</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="bg-success text-white p-4 rounded text-center shadow">
+          <h3 class="fw-bold">₹52,800</h3>
+          <p class="mb-0 small">Revenue</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="bg-warning text-dark p-4 rounded text-center shadow">
+          <h3 class="fw-bold">14</h3>
+          <p class="mb-0 small">Pending Orders</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="bg-danger text-white p-4 rounded text-center shadow">
+          <h3 class="fw-bold">3</h3>
+          <p class="mb-0 small">Critical Alerts</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="bg-info text-dark p-4 rounded text-center shadow">
+          <h3 class="fw-bold">98%</h3>
+          <p class="mb-0 small">Uptime</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="bg-secondary text-white p-4 rounded text-center shadow">
+          <h3 class="fw-bold">42</h3>
+          <p class="mb-0 small">New Messages</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="bg-dark text-white p-4 rounded text-center shadow">
+          <h3 class="fw-bold">7</h3>
+          <p class="mb-0 small">Active Servers</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="bg-light text-dark p-4 rounded text-center shadow border">
+          <h3 class="fw-bold">100%</h3>
+          <p class="mb-0 small">bg-light</p>
+        </div>
+      </div>
+    </div>
+
+    <h6 class="text-muted mt-4">Subtle Background Variants (Bootstrap 5.3+):</h6>
+    <div class="row g-2 mt-1">
+      <div class="col-md-2 col-4"><div class="bg-primary-subtle text-primary-emphasis p-3 rounded text-center small">primary-subtle</div></div>
+      <div class="col-md-2 col-4"><div class="bg-success-subtle text-success-emphasis p-3 rounded text-center small">success-subtle</div></div>
+      <div class="col-md-2 col-4"><div class="bg-danger-subtle text-danger-emphasis p-3 rounded text-center small">danger-subtle</div></div>
+      <div class="col-md-2 col-4"><div class="bg-warning-subtle text-warning-emphasis p-3 rounded text-center small">warning-subtle</div></div>
+      <div class="col-md-2 col-4"><div class="bg-info-subtle text-info-emphasis p-3 rounded text-center small">info-subtle</div></div>
+      <div class="col-md-2 col-4"><div class="bg-secondary-subtle text-secondary-emphasis p-3 rounded text-center small">secondary-subtle</div></div>
+    </div>
+
+    <!-- Exercise 13.2 – bg-gradient with bg-dark -->
+    <h2 class="h5 mt-5">Exercise 13.2 – bg-gradient with bg-dark and White Text</h2>
+    <div class="row g-3 mt-2">
+      <div class="col-md-4">
+        <div class="bg-dark bg-gradient text-white p-5 rounded text-center">
+          <h5>bg-dark + bg-gradient</h5>
+          <p class="mb-0 text-muted">Smooth dark gradient</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-primary bg-gradient text-white p-5 rounded text-center">
+          <h5>bg-primary + bg-gradient</h5>
+          <p class="mb-0 opacity-75">Blue gradient</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-success bg-gradient text-white p-5 rounded text-center">
+          <h5>bg-success + bg-gradient</h5>
+          <p class="mb-0 opacity-75">Green gradient</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-info mt-4">
+      💡 <strong>Note:</strong> <code>bg-gradient</code> adds a subtle linear gradient overlay.
+      It only works when combined with a <code>bg-*</code> color class.
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

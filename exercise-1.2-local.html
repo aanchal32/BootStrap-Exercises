@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 1.2 – Bootstrap 5 via Local Files</title>
+
+  <!--
+    SETUP INSTRUCTIONS (npm):
+      1. Run:  npm install bootstrap
+      2. The files will be in:
+            node_modules/bootstrap/dist/css/bootstrap.min.css
+            node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+      3. Update the paths below to point to those files, OR copy them into
+         a local  css/  and  js/  folder next to this HTML file.
+
+    ALTERNATIVE (downloaded zip):
+      Download from https://getbootstrap.com, unzip, and adjust paths below.
+  -->
+
+  <!-- Local Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="display-5 fw-bold text-success">Bootstrap 5 – Local Setup</h1>
+    <p class="lead">
+      This page uses Bootstrap files downloaded locally (via npm or zip).
+    </p>
+
+    <div class="alert alert-success" role="alert">
+      ✅ If this alert is styled correctly, Bootstrap CSS is loading from your
+      local files!
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-success"
+      data-bs-toggle="modal"
+      data-bs-target="#testModal"
+    >
+      Test JS – Open Modal
+    </button>
+
+    <!-- Modal (tests JS bundle) -->
+    <div
+      class="modal fade"
+      id="testModal"
+      tabindex="-1"
+      aria-labelledby="testModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="testModalLabel">JS is Working!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Bootstrap JavaScript bundle is loaded from your local files.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local Bootstrap JS Bundle -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
